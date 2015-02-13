@@ -19,7 +19,8 @@
 #
 #	It works with the following parameters:
 #	REQUIRED(only one):
-#	-f 		   ->  it will iterate over the numbers inside config.cfg file to choose the one to forward to.
+#	-f 		   ->  it will iterate over the numbers inside config.cfg file 
+#				   to choose the one to forward to.
 #	-n <value> ->  it will use the number passed as parameter from -n tag.
 #	-d  	   ->  it will disable number forwarding.
 #
@@ -136,8 +137,9 @@ disableNumberForwarding(){
 }
 
 ###Parameter handling. 
-###Operation parameters: -f for file, -n for single number, -d for disabling forwarding.
-###Optional call parameters: -p for listening port. Default port is 5183.
+###Operation parameters: -f for file input, -n for single number input, -d for disabling forwarding.
+###Optional call parameters: -p for listening port. Default port is 5183. 
+### 						 -o for storing sipcmd log, inside sipcmd directory. 
 while getopts "op:dfn:" opt; do
   case $opt in
   	o)
