@@ -1,21 +1,25 @@
-####################################################################################
-# NumberForwardingScriptSipcmd
-#
-#
-	This is a bash script to help SIP number forwarding through SIPCMD.
-	*It must be located in the same directory as SIPCMD.*
+
+
+#NumberForwardingScriptSipcmd
+***
+This is a bash script to help SIP number forwarding through SIPCMD.
+
+**It must be located in the same directory as SIPCMD.**
 	
+    
 	A config.cfg file must be created in the same directory, with as many numbers as needed, 
 	according to the following example:
  	
-   ---START OF CONFIG.CFG---
-	user=<value>\n
+   START OF CONFIG.CFG FILE
+   
+	user=<value>
 	pass=<value>
 	gateway=<value>
 	number=<value>
 	number=<value>
 	number=<value>
-  ---END OF CONFIG.CFG---
+   
+  END OF CONFIG.CFG FILE
 
 	It works with the following parameters:
 	REQUIRED(only one):
@@ -27,4 +31,4 @@
 	OPTIONAL
 	-p <value> ->  change the listening port. Default is 5183.
 	-o         ->  create sipcmd log, named siplog.log, inside sipcmd directory.    
-####################################################################################
+
