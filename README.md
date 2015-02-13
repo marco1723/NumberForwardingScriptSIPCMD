@@ -5,8 +5,7 @@
 	This is a bash script to help SIP number forwarding through SIPCMD.
 	*It must be located in the same directory as SIPCMD.*
 	
-	A config.cfg file must be created in the same directory, with 
- as many numbers as needed, according to the following example:
+	A config.cfg file must be created in the same directory, with as many numbers as needed, according to the following example:
  	
    \#---START OF CONFIG.CFG---
 	user=<value>\n
