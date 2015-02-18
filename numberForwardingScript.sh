@@ -17,7 +17,7 @@
 #	number=<value>
 # 	#---END OF CONFIG.CFG---
 #
-#	It works with the following parameters:
+#	This script works with the following parameters:
 #	REQUIRED(only one):
 #	-f 		   ->  it will iterate over the numbers inside config.cfg file 
 #				   to choose the one to forward to.
