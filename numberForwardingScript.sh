@@ -140,24 +140,23 @@ disableNumberForwarding(){
 ###Operation parameters: -f for file input, -n for single number input, -d for disabling forwarding.
 ###Optional call parameters: -p for listening port. Default port is 5183. 
 ### 						 -o for storing sipcmd log, inside sipcmd directory. 
-while getopts "op:dfn:" opt; do
+while getopts "dfn:op:" opt; do
   case $opt in
+	d) 	
+		operation=disableForwarding
+	;;
+    f)  
+	    operation=fileForwarding
+    ;;
+    n)  currentNumber="$OPTARG"
+	    operation=singleNumberForwarding
+    ;;
   	o)
         logOn="-o siplog.log"
 	;;
   	p) 
 		listPort="$OPTARG"
 	;;
-  	d) 	
-		operation=disableForwarding
-	;;
-    f)  #fileName="$OPTARG"
-	    operation=fileForwarding
-    ;;
-    n)  currentNumber="$OPTARG"
-	    operation=singleNumberForwarding
-    ;;
-
     \?) echo "Invalid option -$OPTARG. Enter -f for file input, -n <number> for single number input or -d for disabling forwarding." >&2
 		exit 1
     ;;
@@ -172,5 +171,5 @@ elif [[ $operation = disableForwarding ]]; then
 elif [[ $operation = singleNumberForwarding ]]; then
 	numberForwardingFromSingleNumber
 else
-	echo "Invalid operation. Enter -f for file input, -n <number> for single number input or -d for disabling forwarding." >&2
+	echo "Invalid operation \"$operation\". Enter -f for file input, -n <number> for single number input or -d for disabling forwarding." >&2
 fi
