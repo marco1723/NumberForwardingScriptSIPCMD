@@ -2,7 +2,7 @@
 
 #NumberForwardingScriptSipcmd
 ***
-This is a bash script to help SIP number forwarding through SIPCMD.
+This is a bash script to help SIP number forwarding through SIPCMD(install it - http://sipcmd.sourceforge.net/).
 
 **It must be located in the same directory as SIPCMD.**
 	
